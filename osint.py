@@ -68,7 +68,7 @@ class OSINTTools:
 
 @app.route('/')
 def index():
-    return render_template('osint.html')
+    return render_template('index.html')
 
 @app.route('/whois', methods=['POST'])
 def whois_lookup():
@@ -143,5 +143,5 @@ def analyze_website():
     except Exception as e:
         return jsonify({'error': str(e)}), 500
 
-if __name__ == '__main__':
-    app.run(debug=True, host='0.0.0.0', port=5000)
+if __name__ == "__main__":
+    app.run(debug=True, host='0.0.0.0', port=5001)
